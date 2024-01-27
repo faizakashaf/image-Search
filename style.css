@@ -18,6 +18,7 @@ html , body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 3vw;
 }
 .container h2{
 font-size: 2.5vw;
@@ -67,14 +68,7 @@ border: 1.6px solid lightcoral;
   margin: 1.5vw 1.5vw;
  gap: 15px;
 }
-/* .wrapper .images a{
-    text-decoration: none;
-    color: #000;
-    font-size: 1.4vw;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: .3vw;
-} */
+
 .wrapper .images img{
     width: 250px;
     height: 180px;
@@ -126,9 +120,11 @@ border: 1.6px solid lightcoral;
     .show{
         padding: 2vw 3vw;
         font-size:4vw;
+
     }
     .wrapper .images img{
         width: 300px;
         height: 200px;
+        
     }
 }
