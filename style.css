@@ -18,7 +18,8 @@ html , body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 3vw;
+    padding-bottom: 6vw;
+    margin: 30px;
 }
 .container h2{
 font-size: 2.5vw;
@@ -87,9 +88,13 @@ border: 1.6px solid lightcoral;
     border-radius: 4px;
     cursor: pointer;
     display: none;
+    margin-top: 20px;
 }
 
 @media (max-width: 576px){
+    .container{
+        margin-bottom: 20px;
+    }
     .container h2{
         font-size: 6vw;
         margin: 4vw auto;
