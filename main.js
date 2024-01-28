@@ -6,37 +6,47 @@ const input = document.querySelector("input");
 const wrapper = document.querySelector(".wrapper");
 const showMore = document.querySelector(".show");
 
-let userinput = "";
+// let userinput = "";
 let pagecount = 1;
 
 async function search_images(){
     userinput = input.value;
-let api_url = `https://api.unsplash.com/search/photos?page=${pagecount}&query=${userinput}&client_id=${access_Key}`
+    if(userinput.length == 0){
+       alert("Search an image")
+       showMore.style.display = "none";
+    }
+else{
+    let api_url = `https://api.unsplash.com/search/photos?page=${pagecount}&query=${userinput}&client_id=${access_Key}`
 
-try{
-const response = await fetch (api_url);
-const data =await response.json();
-const results = data.results
-console.log(results)
+    const response = await fetch (api_url);
+    const data =await response.json();
+    const results = data.results
+    // console.log(results)
 
-results.forEach((result) => {
-const images = document.createElement("div");
-images.classList.add ("images");
-const img = document.createElement("img");
-img.src = result.urls.small;
-img.alt = result.description;
-images.appendChild(img);
-wrapper.appendChild(images);
- })
-
- pagecount++
-} catch (error) {
-    console.error("Error fetching images:", error);
-}
-
-if(pagecount > 1){
-    showMore.style.display = "block";
-}
+    if(results.length === 0){
+        console.log("hi")
+        showMore.innerText = "No image Found";
+        showMore.style.display = "block";
+        }
+    else{
+        results.forEach((result) => {
+            const images = document.createElement("div");
+            images.classList.add ("images");
+            const img = document.createElement("img");
+            img.src = result.urls.small;
+            img.alt = result.description;
+            images.appendChild(img);
+            wrapper.appendChild(images);
+             })
+            
+             pagecount++
+            
+            if(pagecount > 1){
+        showMore.innerText = "Show More";
+                showMore.style.display = "block";
+            }}
+    }
+   
 }
 
 form.addEventListener("submit",(e) =>{

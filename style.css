@@ -81,7 +81,7 @@ border: 1.6px solid lightcoral;
 .show{
     padding: .6vw 1vw;
     font-size:1.4vw;
-    font-weight:600;
+    font-weight:300;
     color: #fff;
     background-color: lightcoral;
     border: 0;
@@ -122,7 +122,7 @@ border: 1.6px solid lightcoral;
     }
     .show{
         padding: 2vw 3vw;
-        font-size:4vw;
+        font-size:5vw;
 
     }
     .wrapper .images img{
