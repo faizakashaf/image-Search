@@ -68,6 +68,7 @@ border: 1.6px solid lightcoral;
   align-items: center;
   margin: 1.5vw 1.5vw;
  gap: 15px;
+ position: relative;
 }
 
 .wrapper .images img{
@@ -89,6 +90,13 @@ border: 1.6px solid lightcoral;
     cursor: pointer;
     display: none;
     margin-top: 20px;
+}
+.image_download{
+    position: absolute;
+    bottom: 8%;
+    right: 6%;
+    font-size: 16px;
+   color:  #000;
 }
 
 @media (max-width: 576px){
